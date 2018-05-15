@@ -1,6 +1,2 @@
-
 *.class
-.idea/
-.idea/*.*
-.idea/workspace.xml
-.idea/misc.xml
+.idea/*
