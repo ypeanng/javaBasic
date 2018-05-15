@@ -388,7 +388,7 @@
       <workItem from="1526275556495" duration="239000" />
       <workItem from="1526358271408" duration="260000" />
       <workItem from="1526375482480" duration="472000" />
-      <workItem from="1526384434319" duration="496000" />
+      <workItem from="1526384434319" duration="706000" />
     </task>
     <task id="LOCAL-00001" summary="add htmlparsetest">
       <created>1526035511444</created>
@@ -401,7 +401,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6814000" />
+    <option name="totallyTimeSpent" value="7024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1400" height="877" extended-state="0" />
