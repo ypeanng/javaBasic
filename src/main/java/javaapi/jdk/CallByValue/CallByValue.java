@@ -1,4 +1,4 @@
-package javaapi.CallByValue;
+package javaapi.jdk.CallByValue;
 
 public class CallByValue {
 

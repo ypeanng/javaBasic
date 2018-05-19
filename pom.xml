@@ -7,6 +7,13 @@
   <groupId>org.ypeanng.base</groupId>
   <artifactId>basicApi</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <properties>
+    <fastjson.version>1.1.41</fastjson.version>
+    <jackson_version>2.6.3</jackson_version>
+    <resteasy-jaxrs_version>3.0.9.Final</resteasy-jaxrs_version>
+
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.htmlparser</groupId>
@@ -20,6 +27,57 @@
       <version>1.16.0</version>
       <scope>provided</scope>
     </dependency>
+    <!-- 如果要使用json序列化 -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson_version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson_version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson_version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>1.10.3</version>
+    </dependency>
   </dependencies>
-
+  <repositories>
+    <repository>
+      <id>cn.mogu</id>
+      <name>cn.mogu</name>
+      <url>http://101.200.233.222:8081/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>
+        https://oss.sonatype.org/content/repositories/snapshots
+      </url>
+    </snapshotRepository>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Release Repository</name>
+      <url>
+        https://oss.sonatype.org/service/local/staging/deploy/maven2/
+      </url>
+    </repository>
+  </distributionManagement>
 </project>
