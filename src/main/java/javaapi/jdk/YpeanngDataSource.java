@@ -11,7 +11,6 @@ import java.util.logging.Logger;
 import javax.sql.DataSource;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class YpeanngDataSource implements DataSource {
 //    private static Log log = LogFactory.getLog(SimpleDateSource.class);
     private static final String dirverClassName = "com.mysql.jdbc.Driver";
