@@ -1,5 +1,7 @@
 package javaapi.jdk.DateTest;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import javaapi.jdk.utils.DateUtil;
@@ -9,8 +11,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class DateConvertTest {
     public static void main(String[] args) {
 //        sortStringTest();
-        sortTimeTest();
+//        sortTimeTest();
+        toLocalDateTime();
     }
+
+    private static void toLocalDateTime(){
+        String bookingDate = "2018-08-25 10:20:21";
+        LocalDateTime bookTime = LocalDateTime.parse(bookingDate, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        System.out.println(bookTime.toString());
+    }
+
     private static void XMLGregorianCalendarTest(){
         XMLGregorianCalendar deadline = XMLGregorianCalendarUtil.dateToXmlDate(DateUtil.formatToDate("2018-06-11T23:59:00.000+02:00",
             "yyyy-MM-dd'T'HH:mm:ss.SSS"));
