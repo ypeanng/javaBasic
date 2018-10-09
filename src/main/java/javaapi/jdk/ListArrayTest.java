@@ -22,6 +22,7 @@ public class ListArrayTest {
         List<String> listDemo2 = new ArrayList<>(Arrays.asList(arrayDemo));
         listDemo2.add("add");
         System.out.println(listDemo2.toString());
+        listDemo2.stream().forEach(s -> System.out.println(s));
         //========================================================
         //List to Array
         List<String> listArr = new ArrayList<String>(){{add("23");add("14");add("45");}};
