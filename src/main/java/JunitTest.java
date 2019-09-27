@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import org.junit.Test;
 
 public class JunitTest {
     static List<Integer> forbidOtaSaleBusinessTypes=new ArrayList<>();
@@ -7,7 +8,9 @@ public class JunitTest {
         forbidOtaSaleBusinessTypes.add(4);
         forbidOtaSaleBusinessTypes.add(11);
     }
-    public static void main(String[] args) {
+
+    @Test
+    public void sefq() {
         class A{
             boolean forbidOtaSale;
             public boolean getForbidOtaSale(){
