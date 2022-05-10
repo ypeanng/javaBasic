@@ -6,11 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="esconfig" />
         <module name="javaBasic" />
+        <module name="elasticsearch_springboot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="javaBasic" target="1.8" />
+      <module name="elasticsearch_springboot" target="1.8" />
+      <module name="esconfig" target="1.8" />
+      <module name="javaBasic" target="8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="elasticsearch_springboot" options="-parameters" />
+      <module name="esconfig" options="-parameters" />
+    </option>
   </component>
 </project>

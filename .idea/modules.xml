@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/elasticsearch_springboot/elasticsearch_springboot.iml" filepath="$PROJECT_DIR$/elasticsearch_springboot/elasticsearch_springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/esconfig/esconfig.iml" filepath="$PROJECT_DIR$/esconfig/esconfig.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaBasic.iml" filepath="$PROJECT_DIR$/javaBasic.iml" />
     </modules>
   </component>

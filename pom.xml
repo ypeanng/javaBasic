@@ -7,19 +7,53 @@
   <groupId>org.ypeanng.base</groupId>
   <artifactId>basicApi</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   <properties>
     <fastjson.version>1.1.41</fastjson.version>
     <jackson_version>2.6.3</jackson_version>
     <resteasy-jaxrs_version>3.0.9.Final</resteasy-jaxrs_version>
 
   </properties>
-
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.1.7.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.htmlparser</groupId>
       <artifactId>htmlparser</artifactId>
       <version>1.6</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.20</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.5.5</version>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -42,6 +76,16 @@
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>${jackson_version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.9.13</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-xml</artifactId>
+      <version>2.7.1</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
     <dependency>
@@ -93,6 +137,11 @@
       <version>4.12</version>
       <scope>compile</scope>
     </dependency>
+    <!--基于stream + fluxAPI 的 webflux依赖-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency>
   </dependencies>
   <repositories>
     <repository>
@@ -109,19 +158,15 @@
     </repository>
   </repositories>
   <distributionManagement>
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>
-        https://oss.sonatype.org/content/repositories/snapshots
-      </url>
-    </snapshotRepository>
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Nexus Release Repository</name>
-      <url>
-        https://oss.sonatype.org/service/local/staging/deploy/maven2/
-      </url>
+      <id>releases</id>
+      <name>nexus distribution snapshot repository</name>
+      <url>http://nexus.hbc.tech/nexus/content/repositories/releases/</url>
     </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>nexus distribution snapshot repository</name>
+      <url>http://nexus.hbc.tech/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
 </project>

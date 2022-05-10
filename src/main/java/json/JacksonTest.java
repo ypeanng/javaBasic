@@ -1,0 +1,7 @@
+package json;
+
+public class JacksonTest {
+    String xmlRes = "<Root><Header><Agency>85982</Agency><User>YUNDIJIEXML</User><Password>ydj1230</Password><Operation>PRICE_BREAKDOWN_RESPONSE</Operation><OperationType>Response</OperationType></Header><Main><HotelName><![CDATA[NIEPCE PARIS CURIO COLLECTION BY HILTON]]></HotelName><Room><RoomType><![CDATA[QUEEN DELUXE ROOM...COMP WIFI/TABLET/ESPRESSO MACHINE/HDTV...17 SQM/IRON AND BOARD/LAPTOP SAFE/MINIBAR]]></RoomType><Children>0</Children><Cots>0</Cots><PriceBreakdown><FromDate>2020-02-15</FromDate><ToDate>2020-02-16</ToDate><Price>196.20</Price><Currency>EUR</Currency></PriceBreakdown><PriceBreakdown><FromDate>2020-02-16</FromDate><ToDate>2020-02-18</ToDate><Price>196.21</Price><Currency>EUR</Currency></PriceBreakdown></Room><Room><RoomType><![CDATA[QUEEN DELUXE ROOM...COMP WIFI/TABLET/ESPRESSO MACHINE/HDTV...17 SQM/IRON AND BOARD/LAPTOP SAFE/MINIBAR]]></RoomType><Children>0</Children><Cots>0</Cots><PriceBreakdown><FromDate>2020-02-15</FromDate><ToDate>2020-02-18</ToDate><Price>196.22</Price><Currency>EUR</Currency></PriceBreakdown></Room><Room><RoomType><![CDATA[QUEEN DELUXE ROOM...COMP WIFI/TABLET/ESPRESSO MACHINE/HDTV...17 SQM/IRON AND BOARD/LAPTOP SAFE/MINIBAR]]></RoomType><Children>0</Children><Cots>0</Cots><PriceBreakdown><FromDate>2020-02-15</FromDate><ToDate>2020-02-18</ToDate><Price>196.24</Price><Currency>EUR</Currency></PriceBreakdown></Room></Main></Root>";
+
+
+}
